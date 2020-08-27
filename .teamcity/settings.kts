@@ -49,6 +49,10 @@ object Df : BuildType({
 
 object Kjk : BuildType({
     name = "kjk"
+
+    vcs {
+        root(DslContext.settingsRoot)
+    }
 })
 
 object Kjkj : BuildType({
