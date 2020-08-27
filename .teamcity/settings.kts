@@ -30,6 +30,7 @@ project {
     buildType(Df)
     buildType(Kjkj)
     buildType(Mnmn)
+    buildType(Kjk)
 }
 
 object Df : BuildType({
@@ -44,6 +45,10 @@ object Df : BuildType({
             branchFilter = ""
         }
     }
+})
+
+object Kjk : BuildType({
+    name = "kjk"
 })
 
 object Kjkj : BuildType({
