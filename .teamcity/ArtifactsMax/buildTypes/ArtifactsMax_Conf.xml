@@ -50,7 +50,14 @@ echo "step2"]]></param>
       <vcs-entry-ref root-id="ArtifactsMax_ChubatovaVcs" />
     </vcs-settings>
     <requirements />
-    <build-triggers />
+    <build-triggers>
+      <build-trigger id="vcsTrigger" type="vcsTrigger">
+        <parameters>
+          <param name="enableQueueOptimization" value="true" />
+          <param name="quietPeriodMode" value="DO_NOT_USE" />
+        </parameters>
+      </build-trigger>
+    </build-triggers>
     <build-extensions>
       <extension id="jetbrains.agent.free.space" type="jetbrains.agent.free.space">
         <parameters>
