@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" uuid="c54f5e21-5730-4b7a-bf86-8ba276798ee8" xsi:noNamespaceSchemaLocation="https://www.jetbrains.com/teamcity/schemas/2020.1/project-config.xsd">
+  <name>build2</name>
+  <description />
+  <settings>
+    <options>
+      <option name="artifactRules" value="**/* =&gt; target_directory" />
+    </options>
+    <parameters />
+    <build-runners />
+    <vcs-settings>
+      <vcs-entry-ref root-id="ArtifactsMax_SampleProj" />
+    </vcs-settings>
+    <requirements />
+    <build-triggers />
+    <build-extensions>
+      <extension id="BUILD_EXT_1" type="BuildFailureOnMetric">
+        <parameters>
+          <param name="metricKey" value="VisibleArtifactsSize" />
+          <param name="metricThreshold" value="1 mb" />
+          <param name="metricUnits" value="metricUnitsDefault" />
+          <param name="moreOrLess" value="more" />
+          <param name="withBuildAnchor" value="false" />
+        </parameters>
+      </extension>
+    </build-extensions>
+    <artifact-dependencies>
+      <dependency id="ARTIFACT_DEPENDENCY_1" sourceBuildTypeId="ArtifactsMax_Conf" cleanDestination="false">
+        <revisionRule name="lastSuccessful" revision="latest.lastSuccessful" />
+        <artifact sourcePath="**/* =&gt; dependency" />
+      </dependency>
+    </artifact-dependencies>
+    <cleanup />
+  </settings>
+</build-type>
+
