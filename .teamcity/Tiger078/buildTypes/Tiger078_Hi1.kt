@@ -1,0 +1,7 @@
+package Tiger078.buildTypes
+
+import jetbrains.buildServer.configs.kotlin.v2019_2.*
+
+object Tiger078_Hi1 : BuildType({
+    name = "HI1"
+})
