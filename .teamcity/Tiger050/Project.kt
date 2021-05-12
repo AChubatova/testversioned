@@ -15,4 +15,8 @@ object Project : Project({
     buildType(Tiger050_Hi3)
     buildType(Tiger050_Hi0)
     buildType(Tiger050_Hi1)
+
+    params {
+        param("a", "s")
+    }
 })
